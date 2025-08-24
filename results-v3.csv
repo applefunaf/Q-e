@@ -1,0 +1,257 @@
+Original_Name,SMILES,Q,e
+tetrachloroEthylene,C(=C(Cl)Cl)(Cl)Cl,0.001,1.24
+2-Butene,C/C=C/C,0.002,-0.29
+"1-chloroPropene, cis-",C/C=C\Cl,0.003,-0.46
+"2H-1,3-Dioxol-2-one",C1=COC(=O)O1,0.004,-0.49
+prop-2-en-1-ol,C=CCO,0.005,-1.48
+"1-chloroPropene, trans-",C/C=C/Cl,0.006,-0.16
+1-Butene,CCC=C,0.007,-0.06
+Fluoroethene,C=CF,0.008,0.72
+Propylene,CC=C,0.009,-1.69
+"Bicyclo[2.2.1]hept-2-ene-5,6 dicarboxamine, N-benzyl-",O=C1C2C3CC(C=C3)C2C(=O)N1C1=CC=CC=C1,0.010,-0.36
+trichloro-Ethylene,C(=C(Cl)Cl)Cl,0.010,1.29
+Vinyl o-cresyl ether,CC1=CC=CC=C1OC=C,0.010,-8.53
+Vinyl laurate,CCCCCCCCCCCC(=O)OC=C,0.011,-0.54
+Carbon monoxide,[C-]#[O+],0.013,1.68
+3-tri-rc-butylstannyl-Styrene,CCCC[Sn](CCCC)(CCCC)C1=CC=CC(C=C)=C1,0.014,-0.61
+Vinyl p-cresyl ether,CC1=CC=C(OC=C)C=C1,0.015,-6.86
+Ethylene,C=C,0.016,0.05
+Vinyl m-cresyl ether,CC1=CC(OC=C)=CC=C1,0.016,-6.33
+Crotonic acid,C/C=C/C(=O)O,0.017,0.89
+Vinyl ethyl ether,CCOC=C,0.018,-1.80
+Vinyl 2-chloroethyl ether,C=COCCCl,0.019,-1.64
+Vinyl octyl ether,CCCCCCCCOC=C,0.020,-1.57
+Vinyltriethoxysilane,CCO[Si](C=C)(OCC)OCC,0.021,0.82
+Vinyl-tris(trimethoxysiloxy)silane,CO[Si](OC)(OC)O[Si](O[Si](OC)(OC)OC)(O[Si](OC)(OC)OC)C=C,0.022,-0.12
+Crotonaldehyde,C/C=C/C=O,0.023,0.84
+Isobutylene,CC(=C)C,0.023,-1.20
+Isopropenyl acetate,CC(=C)OC(=O)C,0.023,-0.94
+N-Allylstearamide,CCCCCCCCCCCCCCCCCC(=O)NCC=C,0.024,-0.41
+Vinyl butyrate,CCCC(=O)OC=C,0.024,-0.89
+Vinyl octadecyl ether,CCCCCCCCCCCCCCCCCCOC=C,0.024,-1.93
+Allyl chloride,C=CCCl,0.026,-0.60
+"Ethylene, chlorotrifluoro-",C(=C(F)Cl)(F)F,0.026,1.56
+Vinyl acetate,CC(=O)OC=C,0.026,-0.88
+Vinyl propionate,CCC(=O)OC=C,0.027,-0.68
+Vinyltrimethylsilane,C[Si](C)(C)C=C,0.027,0.19
+"Carbamate, MN-diethyl-, vinyl",CCN(CC)C(=O)OC=C,0.028,-1.11
+"Vinyl N,N-diethylcarbamate",CCN(CC)C(=O)OC=C,0.028,-1.10
+Vinyl ether,C=COC=C,0.029,-1.16
+"Propene, 3,3,3-trichloro-",C=CC(Cl)(Cl)Cl,0.030,1.00
+Vinyl benzoate,C=COC(=O)C1=CC=CC=C1,0.030,-0.89
+Vinyl isobutyl ether,CC(C)COC=C,0.030,-1.27
+Diallyl phthalate,C=CCOC(=O)C1=CC=CC=C1C(=O)OCC=C,0.031,-0.26
+"Ethylene, tetrafluoro-",C(=C(F)F)(F)F,0.032,1.63
+"Phosphonate, isopropenyl-, dimethyl",COP(=O)(OC)OC(C)=C,0.032,0.96
+Hexene-1,CCCCC=C,0.035,0.92
+Triallyl isocyanurate,C=CCN1C(=O)N(C(=O)N(C1=O)CC=C)CC=C,0.035,-0.23
+"Carbamate, AT-vinyl-, ethyl",CCOC(=O)NC=C,0.037,-1.12
+Allylbenzene,C=CCC1=CC=CC=C1,0.038,0.40
+Vinyl bromide,C=CBr,0.038,-0.23
+Vinyl butyl ether,CCCCOC=C,0.038,-1.50
+Vinyl chloroacetate,C=COC(=O)CCl,0.039,-1.61
+"Propenyl, 2-methyl-, acetate",CC(C)=COC(C)=O,0.040,-2.08
+Vinyl dodecyl ether,CCCCCCCCCCCCOC=C,0.041,-1.69
+Vinyl formate,C=COC=O,0.043,-1.19
+Vinyl stearate,CCCCCCCCCCCCCCCCCC(=O)OC=C,0.043,-0.97
+"Phosphonate, vinyl-, bis(2-chloroethyl)",C=CP(=O)(OCCCl)OCCCl ,0.044,1.64
+Vinyl pelargonate,CCCCCCCCC(=O)OC=C,0.046,-1.22
+Vinyl phenyl ether,C=COC1=CC=CC=C1,0.046,-2.16
+Vinyl tert-butyl sulfide,CC(C)(C)SC=C,0.046,-2.20
+"Acrylate, trifluoro-, methyl",COC(=O)C(F)=C(F)F,0.048,1.20
+Norbornadiene,C1C2C=CC1C=C2,0.051,-1.48
+"Maleate, diethyl",CCOC(=O)/C=C\C(=O)OCC,0.053,1.08
+Triallyl citrate,C=CCOC(=O)CC(CC(=O)OCC=C)(C(=O)OCC=C)O,0.054,-0.26
+Vinyl chloride,C=CCl,0.056,0.16
+Vinyl ethyl oxalate,CCOC(=O)C(=O)OC=C,0.056,-0.65
+Vinyl hendecanoate,CCCCCCCCCCC(=O)OC=C,0.056,-0.84
+Diallyl melamine,C=CCN(CC=C)C1=NC(=NC(=N1)N)N ,0.059,-1.57
+Vinyl dichloroacetate,C=COC(=O)C(Cl)Cl,0.059,-1.38
+Vinyl ethyl sulfoxide,CCS(=O)C=C,0.065,0.05
+"Propene, 2-chloro-",CC(=C)Cl,0.073,-0.16
+"Oxazolidone, N-vinyl-",C=CN1CCOC1=O,0.087,-1.70
+N-Vinylpyrrolidone,C=CN1CCCC1=O,0.088,-1.62
+"Propene, 2-chloro-3-hydroxy-",OCC(Cl)=C,0.091,-0.95
+"Fumarate, diisopropyl",CC(C)OC(=O)/C=C/C(=O)OC(C)C,0.11,2.58
+"Imidazole, 1-vinyl-",C=CN1C=CN=C1,0.11,-0.68
+"Propene, 2,3-dichloro-",C=C(CCl)Cl,0.12,-0.40
+Indene,C1C=CC2=CC=CC=C21,0.13,-0.71
+"Tetrazole, 1-vinyl-",C=CN1C=NN=N1,0.13,-0.14
+N-Vinylcaprolactam,C=CN1CCCCCC1=O,0.14,-1.18
+Diallylcyanamide,C=CCN(CC=C)C#N,0.14,2.41
+"Imidazole, 1-vinyl-2-methyl-",CC1=NC=CN1C=C,0.14,-0.98
+"Phosphonate, a-carbomethoxyvinyl-diethyl",CCOP(=O)(OCC)C(=C)C(=O)OC,0.14,—0.04
+Triallyl cyanurate,C=CCOC1=NC(=NC(=N1)OCC=C)OCC=C,0.14,2.41
+9-Vinylanthracene,C=CC1=C2C=CC=CC2=CC3=CC=CC=C31,0.14,0.82
+Vinylisocyanate,C=CN=C=O,0.14,—0.95
+"Acrylate, ferrocenylmethyl",C=CC(=O)OC[C-]1C=CC=C1.[CH-]1C=CC=C1.[Fe+2],0.15,0.51
+"Methacrylamide, 1-deoxy-D-glucitol",CC(=CC[C@H](O)[C@@H](O)[C@H](O)[C@H](O)CO)C(N)=O,0.15,—0.16
+"Styrene, 2,4,6-trimethyl-",CC1=CC(=C(C(=C1)C)C=C)C,0.15,-0.58
+Vinyl butylsulfonate,CCCCS(=O)(=O)OC=C,0.16,1.06
+"Ethylene, 1,1 -diphenyl-",C=C(C1=CC=CC=C1)C1=CC=CC=C1,0.17,-1.71
+"Isobutylene, 3-chloro-",CC(=C)CCl,0.17,-0.86
+"Urea, N-vinyl-N'ethyl-",CCN(C(=O)N(C=C)C)[H],0.17,-1.88
+Isopropenylisocyanate,CC(=C)N=C=O,0.18,—1.05
+"Pyridazinone, 3-(2-vinyl)-6-methyl-",CC1=NN=C(C=C)C(=O)C1,0.18,-0.32
+"4,5-dihydro-2H-pyrrole-3,4-dicarboxylic acid",OC(=O)C1CNCC1C(O)=O,0.18,-0.32
+"Toluenesulfonamide, N,N-methyl-vinyl-",CN(C=C)S(=O)(=O)C1=CC=C(C)C=C1,0.18,—0.53
+Vinyl cinnamate,C=COC(=O)/C=C/C1=CC=CC=C1,0.18,0.76
+"Succinimide, N-vinyl-",C=CN1C(=O)CCC1=O,0.19,-1.42
+"Propenyl, 2-chloro-, acetate",CC(=O)OC=C(C)Cl,0.20,-0.85
+"Styrene, pentachloro-",ClC1=C(Cl)C(Cl)=C(C=C)C(Cl)=C1Cl,0.20,0.79
+1-Acrylamido-1-deoxy-D-glucitol,C=CC(=O)NC[C@@H]([C@H]([C@@H]([C@@H](CO)O)O)O)O,0.22,0.61
+"Methacrylate, ferrocenylmethyl",[Fe++]123456789[C@-]%10([CH]1=[CH]2[CH]3=[CH]4%10)COC(C(C)=C)=O.[CH]51=[CH]6[CH]7=[CH]8[C@@H-]91,0.22,-0.65
+Acrylamide,C=CC(=O)N,0.23,0.54
+Allyl acetate,CC(=O)OCC=C,0.24,-1.07
+"Phosphonate, vinyl-, dimethyl",C[P](C)(=O)(OC=C)OC=C,0.24,-0.25
+"Aconitate, trimethyl",COC(=O)C/C(=C/C(=O)OC)/C(=O)OC,0.25,2.27
+"Fumarate, diethyl",CCOC(=O)/C=C/C(=O)OCC,0.25,2.26
+"Oct-1-ene, 6,6-dimethyl-4,8-dioxaspiro(2,5)-",CC1(C)COC2(OC1)C=C2,0.25,0.61
+"Carbazole, N-vinyl-",C=CN1C2=CC=CC=C2C2=C1C=CC=C2,0.26,-1.29
+"N,N-Divinylaniline",C=CN(C=C)C1=CC=CC=C1,0.26,-0.68
+"Phosphonate, vinyl-, diethyl",CCOP(=O)(OCC)C=C,0.27,-0.40
+Vinyl ethyl sulfide,CCSC=C,0.27,-1.31
+Vinyl thiolacetate,C=COC(=O)CC1=CC=CS1,0.27,-0.52
+Fumaronitrile,C(=C/C#N)\C#N,0.29,2.73
+Vinylferrocene,C=CC1=C[CH]C=C1.C1=C[CH]C=C1.[Fe],0.31,-1.34
+Vinylidene chloride,C=C(Cl)Cl,0.31,0.34
+Allyl acrylate,C=CCOC(=O)C=C,0.32,-0.99
+"Acrylate, benzyl",C=CC(=O)OCC1=CC=CC=C1,0.33,1.13
+"Acrylate, octadecyl",CCCCCCCCCCCCCCCCCCOC(=O)C=C,0.33,1.26
+Vinyl phenyl sulfide,C=CSC1=CC=CC=C1,0.33,-0.99
+"Benzothiazole, vinylmercapto-",SC1=C2N=C(SC2=CC=C1)C=C,0.36,-0.44
+"Acrylate, 2-ethylhexyl",CCCCC(CC)COC(=O)C=C,0.37,0.24
+"Acrylate, butyl",CCCCOC(=O)C=C,0.38,0.85
+"Styrene, a-methoxy-",COC(=C)C1=CC=CC=C1,0.39,-1.02
+Vinyl cymantrene,[C-]#[O+].[C-]#[O+].[C-]#[O+].[C-]1(C=CC=C1)C=C.[Mn],0.39,-0.57
+Methacrylamide,CC(=C)C(=O)N,0.40,-0.05
+"Methacrylamide, N-phenyl-",CC(=C)C(=O)NC1=CC=CC=C1,0.40,0.19
+"Acrylamide, N,N-dimethyl-",CN(C)C(=O)C=C,0.41,-0.26
+"Acrylate, ethyl",CCOC(=O)C=C,0.41,0.55
+2-Methyleneglutaronitrile,C=C(CCC#N)C#N,0.41,1.25
+"4-Cyclopentene-1,3-dione",O=C1CC(=O)C=C1,0.42,2.43
+Vinyl methyl sulfide,CSC=C,0.42,-1.66
+"Oxazoline, 2-,4-methacryloxymethyl-2,4-dimethyl-",CC(=C)C(=O)OCC1(C)COC(C)=N1,0.44,-0.70
+"Acetylene, phenyl-",C#CC1=CC=CC=C1,0.45,0.10
+"Acrylate, methyl",COC(=O)C=C,0.45,0.64
+"Acrylamide, N,N-diethyl-",CCN(CC)C(=O)C=C,0.48,-0.31
+"Acrylate, glycidyl",C=CC(=O)OCC1CO1,0.48,1.28
+Acrylonitrile,C=CC#N,0.48,1.23
+"Acrylate, 2-chloroethyl",C=CC(=O)OCCCl,0.49,1.03
+Vinyl isobutyl sulfide,CC(C)CSC=C,0.49,-0.95
+"Acrylamide, N-methylol-",OCNC(=O)C=C,0.52,1.15
+"Acrylate, a-acetoxy-, ethyl",CCOC(=O)COCCOC(=O)C,0.52,0.77
+"Methacrylate, 2,2,6,6-tetramethyl-4-piperidinyl",CC(=C)C(=O)OC1CC(C)(C)NC(C)(C)C1,0.52,-1.09
+"Tetrazole, 2-methyl-5-vinyl-",CN1N=NC(C=C)=N1,0.55,-0.46
+"Isopropenyl, 3-(1-cyclohexenyl)acetate",CC(=C)C1CCCC(=C1)OC(C)=O,0.57,—0.66
+"Pyridazinone, 3-(2-vinyl)-6-methyl-",CC1=NN=C(C=C)C(=O)C1,0.57,0.24
+Vinyl isopropyl ketone,CC(C)C(=O)C=C,0.58,—1.16
+"Oxazoline, 2-isopropenyl-2-",CC(=C)C1=NCCO1,0.59,-0.64
+Vinyl isothiocyanate,C=CN=C=S,0.59,0.37
+"Methacrylate, 2-acetoxyethyl",CC(=C)C(=O)OCCOC(=O)C,0.60,0.51
+Vinyl methyl sulfoxide,CS(=O)C=C,0.60,-1.79
+"Acrylate, octyl",CCCCCCCCOC(=O)C=C,0.63,2.01
+"Phosphonic acid, a-phenyl-",C1=CC=C(C=C1)P(=O)(O)O,0.65,0.52
+"Acrylamide, N-octadecyl-",CCCCCCCCCCCCCCCCCCNC(=O)C=C,0.66,1.64
+Vinyl methyl ketone,CC(=O)C=C,0.66,1.05
+Vinyl 4-chlorocyclohexyl ketone,ClC1CCC(CC1)C(=O)C=C,0.66,-0.82
+"Acrylate, 2-nitrobutyl",CCC(COC(=O)C=C)N(=O)=O,0.69,1.09
+p-Vinylbenzylethylcarbinol,CCC(CC1=CC=C(C=C1)C)O[H],0.69,-0.98
+"Styrene, p-1 -(2-hydroxybutyl)-",C=CC1=CC=C(C=C1)CC(CC)O[H],0.70,-0.97
+Acenaphthalene,C1=CC2=C3C(=C1)C=CC3=CC=C2,0.72,-1.88
+"Itaconate, dimethyl",COC(=O)CC(=C)C(=O)OC,0.73,0.57
+"Methacrylate, ethyl",CCOC(=O)C(=C)C,0.76,0.17
+Itaconic acid,C=C(CC(=O)O)C(=O)O,0.78,1.07
+"Methacrylate, methyl",CC(=C)C(=O)OC,0.78,0.40
+Acrolein,C=CC=O,0.80,1.31
+"Butadiene, hexafluoro-",FC(F)=C(F)C(F)=C(F)F,0.82,0.58
+"Itaconate, dibutyl",CCCCOC(=O)CC(=C)C(=O)OCCCC,0.82,0.57
+"Methacrylate, butyl",CCCCOC(=O)C(=C)C,0.82,0.28
+"Methacrylate, isobutyl",CC(C)COC(=O)C(=C)C,0.82,0.27
+Acrylic acid,C=CC(=O)O,0.83,0.88
+"Tetrazole, 2-phenyl-5-(4'-vinyl)-phenyl-",C1(=CC=C(C=C1)C2=N[N](N=N2)C3=CC=CC=C3)C=C,0.84,-0.52
+Maleic anhydride,C1=CC(=O)OC1=O,0.86,3.69
+Methacrylonitrile,CC(=C)C#N,0.86,0.68
+"Tetrazole, 2-methyl-5-(4'-vinyl)-phenyl-",C1(=CC=C(C=C1)C2=N[N](N=N2)C)C=C,0.86,0.51
+"Citraconimide, N-methyl-",CN1C(=O)C=C(C)C1=O,0.87,1.58
+"Oxazoline, 2-, 2-isopropenyl-4,4-dimethyl-",CC(=C)C1=NC(C)(C)CO1,0.87,0.34
+"Maleimide, N-butyl-",CCCCN1C(=O)C=CC1=O,0.88,3.70
+"Methacrylate, benzyl",CC(=C)C(=O)OCC1=CC=CC=C1,0.88,0.35
+Maleimide,C1=CC(=O)NC1=O,0.94,2.86
+"Acrylate, heptafluorobutyl",C=CC(=O)OCC(C(C(F)(F)F)(F)F)(F)F,0.96,0.20
+"Methacrylate, isopropyl",CC(C)OC(=O)C(=C)C,0.97,0.10
+"Oxazoline, 2-,4-acryloxymethyl-2,4-dimethyl-",CC1=NC(C)(COC(=O)C=C)CO1,0.97,-0.51
+"Styrene, a-methyl-",CC(=C)C1=CC=CC=C1,0.97,-0.81
+Methacrylic acid,CC(=C)C(=O)O,0.98,0.62
+"Acrylate, a-chloro-, ethyl",C=C(C(=O)[O-])Cl,1.00,-1.03
+Styrene,C=CC1=CC=CC=C1,1.00,-0.80
+Isopropenyl methyl ketone,CC(=C)C(=O)C,1.03,0.64
+"Itaconate, diethyl",CCOC(=O)CC(=C)C(=O)OCC,1.04,0.88
+"Methacrylate, 2-naphthyl",CC(=C)C(=O)OC1=CC2=CC=CC=C2C=C1,1.04,-0.09
+"Methacrylate, 2,3-epithiopropyl",CC(=C)C(=O)OCC1CS1,1.04,0.29
+"Methacrylate, 2-chloroethyl",CC(=C)C(=O)OCCCl,1.04,0.31
+"Quinoline, 2-vinyl-",C=CC1=NC2=CC=CC=C2C=C1,1.04,-0.09
+"Silane, y-methacryloxypropyl-trimethoxy",CC(=C)C(=O)OCCC[Si](OC)(OC)OC,1.08,0.07
+"Styrene, p-1-(2-hydroxypropyl)-",C=CC1=CC=C(C=C1)CC(C)O[H],1.08,-0.35
+"Methacrylate, 2-(sulfonic acid)ethyl",CC(=C)C(=O)OCC[S](=O)(=O)O[H],1.09,0.25
+"Styrene, p-methyl-",CC1=CC=C(C=C1)C=C,1.10,-0.63
+"Tetrazole, 5-phenyl-2-(4'-vinyl)-phenyl-",C1=CC=C(C=C1)C2=N[N](N=N2)C3=CC=C(C=C3)C=C,1.11,0.53
+"Methacrylate, 2-(N,N-dimethylcarbam-oyloxy)ethyl",CN(C)C(=O)OCCOC(=O)C(C)=C,1.14,0.84
+"Styrene, p-2-(2-hydroxypropyl)-",C=CC1=CC=C(C=C1)C(C)(C)O[H],1.15,-0.49
+Vinyl phenyl ketone,C=CC(=O)C1=CC=CC=C1,1.16,1.02
+"Methacrylate, sulfolanyl",CC(=C)C(=O)OC1CCCS1,1.18,0.95
+"Methacrylate, 2-bromoethyl",CC(=C)C(=O)OCCBr,1.18,0.74
+"Methacrylate, phenyl",CC(=C)C(=O)OC1=CC=CC=C1,1.25,0.79
+"Styrene, m-bromo-",BrC1=CC(C=C)=CC=C1,1.25,-0.27
+"Maleimide, N-(2-hydroxyethyl)-",OCCN1C(=O)C=CC1=O,1.26,1.07
+"Pentadiene, trans-1,3-",C\C=C\C=C,1.28,-0.13
+"Pyridine, 2-vinyl-5-ethyl-",CCC1=CN=C(C=C1)C=C,1.29,-0.91
+"Styrene, p-bromo-",C=CC1=CC=C(C=C1)Br,1.30,-0.68
+"Pyridine, 2-methyl-5-vinyl-",CC1=NC=C(C=C1)C=C,1.32,-0.66
+"Styrene, p-chloro-",C=CC1=CC=C(C=C1)Cl,1.33,-0.64
+"Styrene, p-chloromethyl-",ClCC1=CC=C(C=C)C=C1,1.39,-0.38
+"Pyridine, 2-vinyl-",C=CC1=CC=CC=N1,1.41,-0.42
+"Butadiene, 2,3-dimethyl-",CC(=C)C(C)=C,1.42,-0.43
+Acrylic anhydride,C=CC(=O)OC(=O)C=C,1.46,0.31
+"Pyrrolidone, 1-benzyl-3-methylene-5-methyl-",CC1CC(=C)C(=O)N1CC1=CC=CC=C1,1.50,-0.59
+"Styrene, 2,5-dichloro-",C=CC1=C(C=CC(=C1)Cl)Cl,1.50,0.94
+"Styrene, p-methoxy-",COC1=CC=C(C=C)C=C1,1.53,—1.40
+"Styrene, m-methyl-",CC1=CC(=CC=C1)C=C,1.57,-0.03
+"Butadiene-1-carboxylate, ethyl",CCC(OC=O)=CC=C,1.67,1.26
+Butadiene,C=CC=C,1.70,-0.50
+p-Vinylbenzylmethylcarbinol,CC(O)CC1=CC=C(C=C)C=C1,1.70,—1.27
+Vinylhydroquinone dibenzoate,C=CC1=C(OC(=O)C2=CC=CC=C2)C=CC(OC(=O)C2=CC=CC=C2)=C1,1.73,0.84
+"Methacrylate, 2-hydroxyethyl",CC(=C)C(=O)OCCO,1.78,-0.39
+Acryloyl chloride,C=CC(=O)Cl,1.82,1.92
+"Acrolein, methyl-",CC(=O)C=C,1.83,0.71
+"Hexatriene, tetrachloro-",C=C/C=C(/C(=C(Cl)Cl)Cl)\Cl,1.83,0.94
+"Butadiene, 2-fluoro-",FC(=C)C=C,1.88,0.63
+"Phthalimide, N-(methacryloyloxy)-",CC(=C)C(=O)ON1C(=O)C2=C(C=CC=C2)C1=O,1.89,0.96
+"Isoprene, 3-acetoxy-",CC(=O)OC(=C)C(C)=C,1.91,—0.11
+"Butadiene, 1,4-dicarboxylate, diethyl",CCOC(=O)\C=C\C=C\C(=O)OCC,1.94,1.39
+Isoprene,CC(=C)C=C,1.99,-0.55
+Methacryloyl chloride,CC(=C)C(=O)Cl,2.04,1.54
+"Methacrylate, 2-chloro-2,3,3,3-tetrafluoropropyl",CC(=C)C(=O)OCC(F)(Cl)C(F)(F)F,2.09,0.62
+"Styrene, m-nitro-",C=CC1=CC(=CC=C1)[N+](=O)[O-],2.19,0.20
+"Maleimide, N-(2-chlorophenyl)-",ClC1=C(C=CC=C1)N1C(=O)C=CC1=O,2.29,2.87
+"Acrylate, a-chloro-, methyl",COC(=O)C(=C)Cl ,2.43,0.35
+"Styrene, m-chloro-",C=CC1=CC(=CC=C1)Cl,2.46,-0.90
+"Pyridine, 4-vinyl-",C=CC1=CC=NC=C1,2.47,0.84
+Methylenebutyrolactone,C=C1CCC(=O)O1,2.48,0.83
+"Maleimide, 2,3-dimethyl-N-(2-methacryloxyethyl)-",CC(=C)COCCN1C(=O)C(C)=C(C)C1=O,2.54,1.64
+"Styrene, o-chloro-",C=CC1=CC=CC=C1Cl,2.66,1.57
+"Maleimide, N-phenyl-",C1=CC=C(C=C1)N2C(=O)C=CC2=O,2.81,3.24
+"Styrene, p-cyano-",C=CC1=CC=C(C=C1)C#N,2.93,-0.38
+"Maleimide, N-(4-chlorophenyl)-",ClC1=CC=C(C=C1)N1C(=O)C=CC1=O,2.98,2.75
+Methacrylic anhydride,CC(=C)C(=O)OC(=O)C(=C)C,3.00,0.56
+"Acrylic acid, a-bromo-",OC(=O)C(Br)=C,3.07,1.37
+Vinylhydroquinone,OC1=CC=C(O)C(C=C)=C1,4.30,2.26
+"Methacrylate, 2-hydroxypropyl",CC(O)COC(=O)C(C)=C,4.38,1.86
+"Acrylate, a-cyano-, methyl",C=CC(=O)OCC#N,4.91,0.91
+p-Vinylbenzoic acid,C=CC1=CC=C(C=C1)C(=O)O,5.17,1.08
+"Acrylate, a-phenyl-, methyl",C=CC(=O)OCC1=CC=CC=C1,5.19,0.96
+Methacryloylacetone,CC(=C)C(=O)CC(=O)C,5.47,-0.76
+"Butadiene, 2,3-dichloro-",ClC(=C)C(Cl)=C,9.08,0.14
+"Butadiene, 2-chloro-",ClC(=C)C=C,10.52,1.20
+Vinylidene cyanide,C=C(C#N)C#N,14.22,1.92
+Vinyl chloromethyl ketone,ClCC(=O)C=C,16.00,1.78
