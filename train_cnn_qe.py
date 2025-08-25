@@ -252,30 +252,31 @@ def evaluate_model(model, scaler_X, scaler_y, X_test_scaled, y_test, y_test_scal
     with torch.no_grad():
         X_test_tensor = torch.FloatTensor(X_test_scaled).to(device)
         predictions_scaled = model(X_test_tensor).cpu().numpy()
-        # predictions_scaled contains scaled [ln(Q), e]
-        # We unscale it to get the true-scale [ln(Q), e]
         predictions = scaler_y.inverse_transform(predictions_scaled)
     
-    # y_test is already [ln(Q), e]
-    # predictions is also [ln(Q), e]
+    metrics = {}
     
-    mse = mean_squared_error(y_test, predictions)
-    mae = mean_absolute_error(y_test, predictions)
-    r2 = r2_score(y_test, predictions)
+    # 总体性能
+    overall_mse = mean_squared_error(y_test, predictions)
+    overall_mae = mean_absolute_error(y_test, predictions)
+    overall_r2 = r2_score(y_test, predictions)
+    metrics['overall'] = {'mse': overall_mse, 'mae': overall_mae, 'r2': overall_r2}
     
-    metrics = {'overall': {'mse': mse, 'mae': mae, 'r2': r2}, 'lnQ': {}, 'e': {}}
-    
-    print("\n模型评估结果 (ln(Q) and e):")
-    print(f"Mean Squared Error (MSE): {mse:.6f}")
-    print(f"Mean Absolute Error (MAE): {mae:.6f}")
-    print(f"R² Score: {r2:.6f}")
-    
+    print("\n模型总体评估结果:")
+    print(f"  Mean Squared Error (MSE): {overall_mse:.6f}")
+    print(f"  Mean Absolute Error (MAE): {overall_mae:.6f}")
+    print(f"  R² Score: {overall_r2:.6f}")
+
+    # 各参数性能
     for i, param in enumerate(['lnQ', 'e']):
         mse_param = mean_squared_error(y_test[:, i], predictions[:, i])
         mae_param = mean_absolute_error(y_test[:, i], predictions[:, i])
         r2_param = r2_score(y_test[:, i], predictions[:, i])
         metrics[param] = {'mse': mse_param, 'mae': mae_param, 'r2': r2_param}
-        print(f"\n{param} 参数: MSE: {mse_param:.6f}, MAE: {mae_param:.6f}, R²: {r2_param:.6f}")
+        print(f"\n{param} 参数性能:")
+        print(f"  MSE: {mse_param:.6f}")
+        print(f"  MAE: {mae_param:.6f}")
+        print(f"  R²: {r2_param:.6f}")
     
     return predictions, metrics
 
@@ -329,20 +330,20 @@ def save_report_to_md(metrics, config, total_samples, descriptor_info, file_path
     
     report += """---
 ## 3. 模型评估结果
-### 总体性能
-| 指标 | 值 |
-| :--- | :--- |
-| **MSE** | {metrics['overall']['mse']:.6f} |
-| **MAE** | {metrics['overall']['mae']:.6f} |
-| **R² Score** | {metrics['overall']['r2']:.6f} |
 """
-    for param in ['Q', 'e']:
-        report += f"""### 参数{param}性能
+    # 保证 'overall' 在最前面
+    report_order = ['overall', 'lnQ', 'e']
+    
+    for param in report_order:
+        if param in metrics:
+            m = metrics[param]
+            param_name = "总体" if param == 'overall' else f"参数{param}"
+            report += f"""### {param_name}性能
 | 指标 | 值 |
 | :--- | :--- |
-| **MSE** | {metrics[param]['mse']:.6f} |
-| **MAE** | {metrics[param]['mae']:.6f} |
-| **R² Score** | {metrics[param]['r2']:.6f} |
+| **MSE** | {m['mse']:.6f} |
+| **MAE** | {m['mae']:.6f} |
+| **R² Score** | {m['r2']:.6f} |
 """
     report += """---
 ## 4. 训练可视化

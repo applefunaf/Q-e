@@ -253,23 +253,30 @@ def evaluate_model(model, scaler_y, test_loader, y_test, device):
     # y_test is already unscaled, it's our y_true_unscaled
     y_true_unscaled = y_test
 
-    # 将对数转换回原始值
-    q_true = np.exp(y_true_unscaled[:, 0])
-    q_pred = np.exp(y_pred_unscaled[:, 0])
+    # y_true_unscaled[:, 0] is ln(Q)_true, y_pred_unscaled[:, 0] is ln(Q)_pred
+    ln_q_true = y_true_unscaled[:, 0]
+    ln_q_pred = y_pred_unscaled[:, 0]
     e_true = y_true_unscaled[:, 1]
     e_pred = y_pred_unscaled[:, 1]
 
     # 计算指标
     metrics = {
-        'Q': {
-            'RMSE': np.sqrt(mean_squared_error(q_true, q_pred)),
-            'MAE': mean_absolute_error(q_true, q_pred),
-            'R2': r2_score(q_true, q_pred)
+        'ln(Q)': {
+            'MSE': mean_squared_error(ln_q_true, ln_q_pred),
+            'RMSE': np.sqrt(mean_squared_error(ln_q_true, ln_q_pred)),
+            'MAE': mean_absolute_error(ln_q_true, ln_q_pred),
+            'R2': r2_score(ln_q_true, ln_q_pred)
         },
         'e': {
+            'MSE': mean_squared_error(e_true, e_pred),
             'RMSE': np.sqrt(mean_squared_error(e_true, e_pred)),
             'MAE': mean_absolute_error(e_true, e_pred),
             'R2': r2_score(e_true, e_pred)
+        },
+        'overall': {
+            'MSE': mean_squared_error(y_true_unscaled, y_pred_unscaled),
+            'MAE': mean_absolute_error(y_true_unscaled, y_pred_unscaled),
+            'R2': r2_score(y_true_unscaled, y_pred_unscaled)
         }
     }
     return y_pred_unscaled, metrics
@@ -280,14 +287,14 @@ def plot_results(y_true_unscaled, y_pred_unscaled, metrics):
     # 绘图
     fig, axes = plt.subplots(1, 2, figsize=(16, 6))
     
-    # Q 属性图
-    q_true = np.exp(y_true_unscaled[:, 0])
-    q_pred = np.exp(y_pred_unscaled[:, 0])
-    axes[0].scatter(q_true, q_pred, alpha=0.6, label=f"R² = {metrics['Q']['R2']:.3f}")
-    axes[0].plot([min(q_true), max(q_true)], [min(q_true), max(q_true)], 'r--', label="Ideal Line")
-    axes[0].set_xlabel("Actual Q")
-    axes[0].set_ylabel("Predicted Q")
-    axes[0].set_title("Q: Actual vs. Predicted")
+    # ln(Q) 属性图
+    ln_q_true = y_true_unscaled[:, 0]
+    ln_q_pred = y_pred_unscaled[:, 0]
+    axes[0].scatter(ln_q_true, ln_q_pred, alpha=0.6, label=f"R² = {metrics['ln(Q)']['R2']:.3f}")
+    axes[0].plot([min(ln_q_true), max(ln_q_true)], [min(ln_q_true), max(ln_q_true)], 'r--', label="Ideal Line")
+    axes[0].set_xlabel("Actual ln(Q)")
+    axes[0].set_ylabel("Predicted ln(Q)")
+    axes[0].set_title("ln(Q): Actual vs. Predicted")
     axes[0].legend()
     axes[0].grid(True)
 
@@ -322,9 +329,23 @@ def save_report_to_md(metrics, config, total_samples, descriptor_info, file_path
     for key, value in config.items():
         report += f"| `{key}` | {value} |\n"
     report += "--- \n## 3. 模型评估结果\n"
+    
+    # 保证 'overall' 在最前面
+    report_order = ['overall', 'ln(Q)', 'e']
+    
+    for param in report_order:
+        if param in metrics:
+            m = metrics[param]
+            param_name = "总体" if param == 'overall' else param.upper()
+            report += f"### {param_name} 性能\n| 指标 | 值 |\n| :--- | :--- |\n"
+            report += f"| **MSE** | {m['MSE']:.6f} |\n| **MAE** | {m['MAE']:.6f} |\n| **R² Score** | {m['R2']:.6f} |\n"
+    
+    # 添加其他不在预设顺序中的指标
     for param, m in metrics.items():
-        report += f"### {param.upper()} 性能\n| 指标 | 值 |\n| :--- | :--- |\n"
-        report += f"| **MSE** | {m['mse']:.6f} |\n| **MAE** | {m['mae']:.6f} |\n| **R² Score** | {m['r2']:.6f} |\n"
+        if param not in report_order:
+            report += f"### {param.upper()} 性能\n| 指标 | 值 |\n| :--- | :--- |\n"
+            report += f"| **MSE** | {m['MSE']:.6f} |\n| **MAE** | {m['MAE']:.6f} |\n| **R² Score** | {m['R2']:.6f} |\n"
+            
     report += """---
 ## 4. 训练可视化
 ![训练结果图](gcn_pyg_training_results.png)
