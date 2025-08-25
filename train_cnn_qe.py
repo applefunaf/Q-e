@@ -141,7 +141,11 @@ def load_and_preprocess_data(csv_path):
         raise ValueError("无法从任何SMILES中提取特征")
 
     X = np.array(features)
-    y = df.iloc[valid_indices, 1:3].values
+    y = df.iloc[valid_indices, 1:3].values.astype(np.float32)
+
+    # 将 Q 转换为 ln(Q)
+    print("将目标 'Q' 转换为 'ln(Q)'")
+    y[:, 0] = np.log(y[:, 0])
 
     print(f"特征形状: {X.shape}")
     print(f"目标形状: {y.shape}")
@@ -248,20 +252,25 @@ def evaluate_model(model, scaler_X, scaler_y, X_test_scaled, y_test, y_test_scal
     with torch.no_grad():
         X_test_tensor = torch.FloatTensor(X_test_scaled).to(device)
         predictions_scaled = model(X_test_tensor).cpu().numpy()
+        # predictions_scaled contains scaled [ln(Q), e]
+        # We unscale it to get the true-scale [ln(Q), e]
         predictions = scaler_y.inverse_transform(predictions_scaled)
+    
+    # y_test is already [ln(Q), e]
+    # predictions is also [ln(Q), e]
     
     mse = mean_squared_error(y_test, predictions)
     mae = mean_absolute_error(y_test, predictions)
     r2 = r2_score(y_test, predictions)
     
-    metrics = {'overall': {'mse': mse, 'mae': mae, 'r2': r2}, 'Q': {}, 'e': {}}
+    metrics = {'overall': {'mse': mse, 'mae': mae, 'r2': r2}, 'lnQ': {}, 'e': {}}
     
-    print("\n模型评估结果:")
+    print("\n模型评估结果 (ln(Q) and e):")
     print(f"Mean Squared Error (MSE): {mse:.6f}")
     print(f"Mean Absolute Error (MAE): {mae:.6f}")
     print(f"R² Score: {r2:.6f}")
     
-    for i, param in enumerate(['Q', 'e']):
+    for i, param in enumerate(['lnQ', 'e']):
         mse_param = mean_squared_error(y_test[:, i], predictions[:, i])
         mae_param = mean_absolute_error(y_test[:, i], predictions[:, i])
         r2_param = r2_score(y_test[:, i], predictions[:, i])
@@ -280,15 +289,19 @@ def plot_results(train_losses, val_losses, y_test, predictions):
     axes[0, 0].legend()
     axes[0, 0].grid(True)
     
-    for i, param in enumerate(['Q', 'e']):
+    for i, param in enumerate(['lnQ', 'e']):
         ax = axes[0, 1] if i == 0 else axes[1, 0]
-        ax.scatter(y_test[:, i], predictions[:, i], alpha=0.7)
-        ax.plot([y_test[:, i].min(), y_test[:, i].max()], [y_test[:, i].min(), y_test[:, i].max()], 'r--', lw=2)
+        
+        y_true = y_test[:, i]
+        y_pred = predictions[:, i]
+
+        ax.scatter(y_true, y_pred, alpha=0.7)
+        ax.plot([y_true.min(), y_true.max()], [y_true.min(), y_true.max()], 'r--', lw=2)
         ax.set(xlabel=f'True {param}', ylabel=f'Predicted {param}', title=f'{param} Parameter: Predicted vs True')
         ax.grid(True)
     
     q_error, e_error = y_test[:, 0] - predictions[:, 0], y_test[:, 1] - predictions[:, 1]
-    axes[1, 1].hist(q_error, alpha=0.7, label='Q Error', bins=20)
+    axes[1, 1].hist(q_error, alpha=0.7, label='lnQ Error', bins=20)
     axes[1, 1].hist(e_error, alpha=0.7, label='e Error', bins=20)
     axes[1, 1].set(xlabel='Prediction Error', ylabel='Frequency', title='Prediction Error Distribution')
     axes[1, 1].legend()
